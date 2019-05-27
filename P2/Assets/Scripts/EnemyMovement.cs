@@ -3,13 +3,15 @@ using System.Collections;
 
 public class EnemyMovement : MonoBehaviour
 {
-    Transform player;               // Reference to the player's position.
-    Vector3 nav;               // Reference to the nav mesh agent.
+    Transform player;
+    Vector3 nav;
+
+    public Sprite imagen;
 
 
     void Awake()
     {
-        // Set up the references.
+        
         player = GameObject.FindGameObjectWithTag("Player").transform;
         nav = gameObject.transform.position;
     }
