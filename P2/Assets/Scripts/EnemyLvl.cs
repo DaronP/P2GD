@@ -8,6 +8,7 @@ public class EnemyLvl : MonoBehaviour
     public int eLvl = 1;
     public double attack = 0.5;
     public double defense = 1;
+    public float Health = 50;
 
     // Start is called before the first frame update
     void Start()

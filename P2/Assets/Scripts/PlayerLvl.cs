@@ -11,6 +11,7 @@ public class PlayerLvl : MonoBehaviour
     double defense = 1;
     public int plevel = 0;
     public EnemyLvl elevel;
+    public float health = 100;
 
     // Start is called before the first frame update
     void Start()
