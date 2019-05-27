@@ -17,11 +17,12 @@ public class EnemyMovement : MonoBehaviour
 
     void Update()
     {
-        transform.LookAt(player);
-
-        if(Vector3.Distance(nav, player.position) >= 0)
+        if (Vector3.Distance(nav, player.position) <= 10f)
         {
-            nav += Vector3.forward * 5 * Time.deltaTime;
+            transform.rotation = Quaternion.Slerp(transform.rotation, Quaternion.LookRotation(player.position - transform.position), 3.0f * Time.deltaTime);
+            //nav += Vector3.forward * 5 * Time.deltaTime;
+            //transform.LookAt(player);
+            transform.position += transform.forward * 2.5f * Time.deltaTime;
         }
     }
 }
